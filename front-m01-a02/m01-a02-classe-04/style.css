@@ -1,0 +1,18 @@
+body{
+    background: green;
+    color: yellow;
+}
+h1{
+    text-align: center;
+    color: red
+    
+}
+h2{
+    color: red;
+}
+p{
+    text-align: justify;
+}
+ol{
+    font-size: 20px;
+}

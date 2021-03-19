@@ -1,0 +1,67 @@
+body{
+    margin: 0px;
+}
+
+.container {
+    background: white;
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item2-2 {
+    background: pink;
+    margin: 10px 0 10px 10px;
+    flex-grow: 4;
+}
+.item2-1 {
+    background: blue;
+    margin: 10px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item4 {
+    background: green;
+}
+
+.item1 {
+    background: blue;
+}
+
+h2 {
+    text-align: center;
+}
+
+.item2{
+    background: white;
+    display: flex;
+    flex-grow: 1;
+}
+
+.item2-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: orange;
+    flex-basis: 200px;
+    height: 300px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.espaco {
+    background: black;
+    height: 40px;
+    margin: 0 5px;
+}
+
+.texto{
+    flex-grow: 1;
+}
