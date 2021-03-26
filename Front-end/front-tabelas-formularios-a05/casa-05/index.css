@@ -1,0 +1,37 @@
+table{
+    border-collapse: collapse;
+    box-shadow: 0 0 5px black;
+}
+
+thead{
+    background-color: rgb(22, 10, 88);
+    font-size: 24px;
+}
+tbody{
+    background-color: rgb(156, 173, 248);
+    font-size: 16px;
+}
+tbody tr{
+    border: 2px solid black;
+}
+td{
+    border: 1px solid black;
+    text-align: justify;
+}
+th{ 
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+body{
+    background-color: rgb(81, 196, 216);
+    color: white;
+}
+th:first-child{
+    border-top-left-radius: 15px;
+}
+th:last-child{
+    border-top-right-radius: 15px;
+}
