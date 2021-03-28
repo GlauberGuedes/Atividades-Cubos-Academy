@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe 01</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            min-width: 100vw;
+            margin: 0;
+        }
+        #balao{
+            position: absolute;
+            width: 697px;
+            height: 657px;
+            top: -60px;
+            right: -90px;
+            z-index: -2;
+        }
+        #curve{
+            position: absolute;
+            width: 610px;
+            height: 150.94px;
+            top: 649.06px;
+            left: 0px;
+            z-index: -2;
+        }
+
+        #quotes{
+            position: absolute;
+            width: 120px;
+            height: 100px;
+            top: -65px;
+            left: 95px;
+            z-index: -2;
+        }
+        .div-body {
+            display: flex;
+            position: relative;
+        }
+        div img{
+            border-radius: 5px;
+        }
+        .conteudo {
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 44px;
+            color: #202047;
+            position: relative;
+            align-self: center;
+            top:100px;
+            left: 100px;
+            z-index: 1;
+        }
+        .identificacao{
+            color: #202047;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 38px;
+            display: flex;
+            width: 458px;
+            height: 38px;
+        }
+        .profissao{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 38px;
+            color: #B9B9CE;
+            margin-left: 40px;
+        }
+        .paragrafo{
+            width: 635px;
+            height: 220px;
+            position: relative;
+        }
+        .imagem #foto{
+            
+            background-color: #EBEBEB;
+            border-radius: 5px;
+            box-shadow: 0px 40px 50px -30px rgba(36, 36, 113, 0.495001);
+        }
+        .imagem {
+            position: relative;
+            top:90px;
+            left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-body">
+        <div class="conteudo">
+            <div class="paragrafo">
+            <p>“ Estive interessada em código por um tempo mas não tomava uma atitude, até agora. Não consigo recomendar esse curso o suficiente. Estou no trabalho dos meu sonhos e vejo um futuro brilhante! ”</p>
+            <img src="assets/pattern-quotes.svg" id="quotes"/>
+            </div>
+            <div class="identificacao">
+                <p>Gabriela da Silva</p>
+                <p class="profissao">Desenvolvedora Fullstack</p>
+            </div>
+        </div>
+        <div class="imagem">
+            <img src="assets/gabriela.jpg" width="540" height=" 540" id="foto"/>
+            <img src="assets/pattern-bg.svg" id="balao"/>
+        </div>
+        <img src="assets/pattern-curve.svg" id="curve"/>
+    </div> 
+               
+</body>
+
+</html>

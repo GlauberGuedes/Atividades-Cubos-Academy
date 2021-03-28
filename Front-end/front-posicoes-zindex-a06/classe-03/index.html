@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe 03</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Kumbh Sans', sans-serif;
+            background-image: url(images/background-top.svg), url(images/background-bottom.svg);
+            background-repeat: no-repeat;
+            background-color: #0989B4;
+            background-position: -350px -500px, 680px 300px;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;   
+        }
+        .nome{
+            font-weight: 700;
+            font-size: 18px;
+            text-align: center;
+            color: #2E3349;
+            line-height: 18px;
+            margin-top: 70px;
+        }
+        .cidade{
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: #6B7082;
+        }
+
+        .rede-social {
+            display: flex;
+            justify-content: space-evenly;
+            border-top: 1px solid #E8E9EC;
+            margin-top: 30px;
+        }
+
+        .rede-social h2{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            color: #2E3349;
+        }
+        .rede-social p{
+            font-size: 10px;
+            line-height: 10px;
+            text-align: center;
+            letter-spacing: 1.5px;
+            color: #6B7082;
+        }
+        .card{
+            background-color: white;
+            width: 350px;
+            height: 374px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+        }
+        img{
+            border-radius: 15px 15px 0px 0px;
+        }
+        .foto{
+            position: relative;
+        }
+        .foto img{
+            border: 5px solid #FFFFFF;
+            border-radius: 50%;
+            width: 96px;
+            height: 96px;
+            position: absolute;
+            top: -50px;
+            left: 125px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div>
+            <img src="images/background-card.svg"/>
+        </div>
+        <div class="informacoes">
+            <div class="foto">
+                <img src="images/image-victor.jpg"/>
+            </div>
+            <div class="nome">
+                <p>Victor Crest <span style="font-weight: 400; color: #6B7082;">26</span></p>
+            </div>
+            <div class="cidade">
+                <p>London</p>
+            </div>
+            <div class="rede-social">
+                <div>
+                    <h2>80K</h2>
+                    <p>Followers</p>
+                </div>
+                <div>
+                    <h2>803K</h2>
+                    <p>Likes</p>
+                </div>
+                <div>
+                    <h2>1.4K</h2>
+                    <p>Photos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

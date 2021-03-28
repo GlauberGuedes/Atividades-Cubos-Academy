@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe 02</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    
+    <style>
+        body{
+            background-image: url(assets/background.svg); background-repeat: no-repeat; background-size: cover; background-color: #684BB1;
+            margin: 0;
+        }
+        .div-body{
+            display: flex;
+            flex-direction: column;
+            font-family: 'Open Sans', sans-serif;
+            
+        }
+        .cabecalhos{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 60px;
+            color: #FFFFFF;
+            width: 487px;
+            height: 120px;
+        }
+        .logo{
+           margin-top: 20px;
+           margin-left: 20px;
+        }
+        .centro-body{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        .conteudo{
+            display: flex;
+            flex-direction: column;
+        }
+        .paragrafo{
+            font-size: 18px;
+            line-height: 27px;
+            color: #FFFFFF;
+            width: 520px;
+            height: 81px;
+            position: relative;
+            top: 30px;
+        }
+        button {
+            all: unset;
+        }
+        .registre button{
+            width: 200px;
+            height: 56px;
+            border-radius: 28px;
+            background-color: #FFFFFF;
+            box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+            color: #684BB1;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            line-height: 27px;
+            position: relative;
+            top: 70px;
+            cursor: pointer;
+        }
+        .registre button:hover{
+            background-color: #E880E8;
+            box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+        }
+        .icones{
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px;
+        }
+        .icones i{
+            color: white;
+            margin-right: 20px;
+            border: 1px solid white;
+            border-radius: 360px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .circulo-face {
+            padding: 7px 11px;
+        }
+        .circulo{
+            padding: 8px;
+        }
+        #twitter:hover{
+            color: #E880E8;
+            border: 1px solid #E880E8;
+            border-radius: 360px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-body">
+        <div class="logo">
+            <img src="assets/logo.svg" width="200px" height="32px"/>
+        </div>
+        <div class="centro-body">
+            <div>
+                <img src="assets/illustration-mockups.svg" width="696" height="493"/>
+            </div>
+            <div class="conteudo">
+                <div class="cabecalhos">
+                    <p>Crie A Comunidade Que Seus Fãs Irão Amar</p>
+                </div>
+                <div class="paragrafo">
+                    <p>Huddle re-imagina a maneira que criamos comunidades. Você tem voz, assim como sua audiência. Crie conexões com seus usuários entrando em discussões genuínas.</p>
+                </div>
+                <div class="registre">
+                    <button type="button">Registre-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="icones">
+            <i class="fab fa-facebook-f circulo-face"></i>
+            <i class="fab fa-twitter circulo" id="twitter"></i>
+            <i class="fab fa-instagram circulo"></i>
+        </div>
+    </div>
+    
+</body>
+</html>
