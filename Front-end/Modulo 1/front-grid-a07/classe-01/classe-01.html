@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe 01</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #ECF2F8;
+            min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: minmax(min-content, 285px) minmax(min-content, 70px) minmax(min-content, 240px) minmax(min-content, 80px);
+            grid-template-rows: minmax(min-content, 128px) minmax(min-content, 102px) minmax(min-content, 18px) minmax(min-content, 22px);
+            grid-template-areas: "foto titulo titulo titulo" "foto conteudo conteudo conteudo" "foto foto-perfil nome icone" "foto foto-perfil data icone";           
+            
+            background-color: white;
+            place-items: start;
+            
+            border-radius: 10px;
+            box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+        }
+        .grid img{
+            grid-area: foto;
+            border-radius: 10px 0 0 10px;
+        }
+        .grid h1{
+            grid-area: titulo;
+            font-weight: 700;
+            color: #48556A;
+            font-size: 20px;
+            padding: 10px 30px 10px 30px;
+            margin: 0;
+        }
+        .grid p{
+            grid-area: conteudo;
+            font-weight: 200;
+            font-size: 13px;
+            color: #6E8098;
+            padding: 0px 30px 30px 30px;
+        }
+        .grid .data{
+            font-weight: 200;
+            font-size: 13px;
+            color: #9DAEC2;
+            grid-area: data;
+            width: max-content;
+            padding-left: 20px;
+        }
+        .grid h2{
+            font-weight: 700;
+            font-size: 13px;
+            color: #48556A;
+            grid-area: nome;
+            width: max-content;
+            padding-left: 20px;
+        }
+        .grid .foto{
+            grid-area: foto-perfil;
+            margin-left: 30px;
+            border-radius: 50%;
+        }
+        .grid .icone{
+            grid-area: icone;
+            justify-self: end;
+            
+            align-self: center;
+            padding: 3px 6px;
+            background-color: #ECF2F8;
+            border-radius: 50%;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .grid .icone:hover{
+            background: #6E8098;
+        }
+        .grid .icone svg:hover path{
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <img src="images/drawers.jpg" width="285px" height="280px"/>
+        <h1>Mude a aparência geral adicionando esses toques maravilhosos aos móveis de sua casa</h1>
+        <p>Já esteve em uma sala e sentiu como se algo estivesse faltando? Talvez um pouco vazia e convidativa. Tenho algumas dicas simples para tornar qualquer ambiente completo.</p>
+        <img class="foto" src="images/avatar-michelle.jpg" width="40px" height="40px"/>
+        <h2>Michele Campos</h2>
+        <div class="data">28 Jun 2020</div>
+        <div class="icone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+        </div>
+    </div>
+    
+</body>
+</html>

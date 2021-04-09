@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe 02</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+        }
+        body{     
+            min-height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color: #ECF2F8;   
+        }
+        .container{
+            margin: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(4, fr);
+            grid-template-rows: repeat(2, minmax(min-content, 1fr));
+            grid-template-areas: "card-1 card-1 card-2 card-3" "card-4 card-5 card-5 card-3";
+        }
+        .card-1{
+            background-color: #733FC8;
+            
+            
+            box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas: "foto perfil" "titulo titulo" "conteudo conteudo";
+            grid-area: card-1;
+        }
+        .card-1 img, .card-5 img{
+            grid-area: foto;
+            border: 2px solid #A775F1;
+            border-radius: 50%;
+            margin: 30px 0 0 30px;
+        }
+        .card-2 img, .card-3 img, .card-4 img{
+            grid-area: foto;
+            border-radius: 50%;
+            margin: 30px 0 0 30px; 
+        }
+        .card-1 .perfil, .card-4 .perfil, .card-5 .perfil, .card-2 .perfil, .card-3 .perfil{
+            grid-area: perfil;
+            padding: 30px 0 20px 10px;
+        }
+        .card-1 .perfil p, .card-5 .perfil p, .card-2 .perfil p{
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 11px;
+            opacity: 0.5;
+            padding: 0;
+        }
+        .card-4 .perfil p, .card-3 .perfil p{
+            color: #48556A;
+            font-weight: 500;
+            font-size: 11px;
+            opacity: 0.5;
+            padding: 0;
+        }
+        .card-1 .perfil h2, .card-5 .perfil h2, .card-2 .perfil h2{
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .card-4 .perfil h2, .card-3 .perfil h2{
+            color: #48556A;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .card-1 h1, .card-5 h1, .card-2 h1{
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 20px;
+            grid-area: titulo;
+            padding: 0 35px 20px 30px;
+        }
+        .card-1 p, .card-5 p, .card-2 p, .card-3 p{
+            color: #CFCFCF;
+            font-weight: 500;
+            font-size: 13px;
+            opacity: 0.7;
+            grid-area: conteudo;
+            padding: 0 35px 20px 30px;
+        }
+        .card-2{
+            background-color: #48556A;
+            
+            
+            box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-area: card-2;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas: "foto perfil" "titulo titulo" "conteudo conteudo";
+        }
+        .card-3{
+            background-color: #FFFFFF;
+            
+            
+            box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+            border-radius: 8px;
+            display: grid;
+            grid-area: card-3;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas: "foto perfil" "titulo titulo" "conteudo conteudo";
+        }
+        .card-4{
+            background-color: #FFFFFF;
+            
+            
+            box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+            border-radius: 8px;
+            display: grid;
+            grid-area: card-4;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas: "foto perfil" "titulo titulo" "conteudo conteudo";
+        }
+        .card-3 p, .card-4 p{
+            color: #48556A;
+            opacity: 0.7;
+            font-weight: 500;
+            font-size: 13px;
+            grid-area: conteudo;
+            padding: 0 35px 20px 30px;
+        }
+        .card-4 h1, .card-3 h1{
+            color: #48556A;;
+            font-weight: 600;
+            font-size: 20px;
+            grid-area: titulo;
+            padding: 0 35px 20px 30px;
+        }
+        .card-5{
+            background-color: #19202D;
+            
+            
+            box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+            border-radius: 8px;
+            display: grid;
+            grid-area: card-5;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-template-areas: "foto perfil" "titulo titulo" "conteudo conteudo";
+        }
+        .card-1, .card-2 {
+            margin-bottom: 24px;
+        }
+        .card-2,.card-3,.card-5{
+            margin-left: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-1">
+            <img src="images/image-daniel.jpg" width="28px" height="28px"/>
+            <div class="perfil">
+                <h2>Daniel Clifford</h2>
+                <p>Graduado</p>
+            </div>
+            <h1>Recebi uma oferta de emprego no meio do curso, e as matérias que aprendi eram atuais, senão mais, na empresa em que entrei. Sinceramente, sinto que vali cada centavo.</h1>
+            <p>“Fui paramédico por muitos anos antes de entrar para o bootcamp. Queria fazer uma transição e ouvi algumas pessoas que tiveram uma experiência incrível aqui. Me inscrevi para o curso de introdução gratuito e achei muito divertido! Me matriculei logo após isso. As 12 semanas seguintes foram os melhores - e mais cansativos - momentos da minha vida. Desde que concluí o curso, mudei de carreira com sucesso, trabalhando como Engenheiro de Software em uma startup de VR.” </p>
+        </div>
+        <div class="card-2">
+            <img src="images/image-jonathan.jpg" width="28px" height="28px"/>
+            <div class="perfil">
+                <h2>Jonathan Walters</h2>
+                <p>Graduado</p>
+            </div>
+            <h1>A equipe me apoiou muito e me manteve motivado</h1>
+            <p>“Comecei do zero, sem nenhuma habilidade de código. Agora trabalho como mobile dev para uma grande empresa. Este foi um dos melhores investimentos que fiz em mim mesmo.“ </p>
+        </div>
+        <div class="card-3">
+        <img src="images/image-kira.jpg" width="28px" height="28px"/>
+        <div class="perfil">
+            <h2>Kira Whittle</h2>
+            <p>Graduado</p>
+        </div>
+        <h1>Uma experiência de mudança de vida. Recomendo muito!</h1>
+        <p>“Antes de entrar no bootcamp, nunca escrevi uma linha de código. Eu precisava de profissionais para me ajudar a aprender passo a passo. Fui incentivada a me inscrever por um ex-aluno deles que só disse coisas maravilhosas sobre o programa. A ementa e equipe não me decepcionaram. Os professores foram muito práticos e eu não tinha que esperar muito por ajuda. O projeto com SCRUM, em particular, foi excelente. Levou meu aprendizado para o próximo nível de uma forma que nenhum tutorial poderia ter feito. Certamente me ajudou a conseguir um emprego como dev full-stack depois de receber várias ofertas. Recomendo 100%! ”</p>
+        </div>
+        <div class="card-4">
+            <img src="images/image-jeanette.jpg" width="28px" height="28px"/>
+            <div class="perfil">
+                <h2>Jeanette Harmon</h2>
+                <p>Graduado</p>
+            </div>
+            <h1>Uma experiência geral maravilhosa e gratificante</h1>
+            <p>“Obrigado pela experiência maravilhosa! Agora tenho um emprego de que gosto muito e ganho bem a vida fazendo algo que adoro. ”</p>
+        </div>
+        <div class="card-5">
+            <img src="images/image-patrick.jpg" width="28px" height="28px"/>
+            <div class="perfil">
+                <h2>Patrick Abrams</h2>
+                <p>Graduado</p>
+            </div>
+            <h1>Apoio de ensino incrível dos professores que fizeram o bootcamp. Foi fácil obter orientação deles e aprender com suas experiências.</h1>
+            <p>“O pessoal parece genuinamente preocupado com o meu progresso, o que considero muito revigorante. O programa me deu a confiança necessária para sair pelo mundo e me apresentar como um dev júnior. Você receberá a atenção pessoal que precisa de uma comunidade de pessoas inteligentes e incríveis.”</p>
+            </div>
+    </div>
+    
+</body>
+</html>
