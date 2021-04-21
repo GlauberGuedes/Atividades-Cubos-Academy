@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="estilo-exercicio.css">
+        <title>Classe 1</title>
+    </head>
+
+    <body>
+        <div class="content-wrapper">
+            <div class="hero">
+                <h1 class="main-heading animate__animated animate__fadeInDown">Aprenda a codar observando outros.</h1>
+                <p class="paragraph animate__animated animate__fadeInUp">Veja como devs experientes resolvem problemas em tempo real. Assitir tutoriais com roteiro é ótimo, mas entender como desenvolvedores pensam, não tem preço.</p>
+            </div>
+
+            <div class="cta">
+                <div class="feature animate__animated animate__fadeIn"><span>7 dias grátis</span> depois R$20/mês.</div>
+                <form action="#" method="POST" class="form">
+                    <div class="input-wrapper animate__animated animate__fadeIn">
+                        <label for="first-name" class="hidden">Nome</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Nome" class="form__first-name">
+                        <div class="validity-icon"></div>
+                    </div>
+                    <div class="input-wrapper animate__animated animate__fadeIn">
+                        <label for="last-name" class="hidden">Sobrenome</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Sobrenome" class="form__last-name">
+                        <div class="validity-icon"></div>
+                    </div>
+                    <div class="input-wrapper animate__animated animate__fadeIn">
+                        <label for="email" class="hidden">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" class="form__email">
+                        <div class="validity-icon"></div>
+                    </div>
+                    <div class="input-wrapper animate__animated animate__fadeIn">
+                        <label for="password" class="hidden">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Senha" class="form__password">
+                        <div class="validity-icon"></div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button type="submit" class="animate__animated animate__bounceIn">PEGUE SUA AMOSTRA GRÁTIS</button>
+                    </div>
+                    <p class="form__disclaimer animate__animated animate__fadeIn">Clicando neste botão, você está aceitando nossos <a href="#">Termos e Serviços.</a></p>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const form = document.querySelector("form");
+        const nome = document.querySelector("#first-name");
+        const sobreNome = document.querySelector("#last-name");
+        const email = document.querySelector("#email");
+        const senha = document.querySelector("#password");
+        const botao = document.querySelector("button");
+        const erro = "erro";
+        let nomeValidado = false;
+        let sobreNomeValidado = false;
+        let senhaValidada = false;
+        nome.addEventListener("input", (event) => {
+            const inicial = nome.value.charAt(0);
+            if(!event.target.value || inicial === inicial.toLowerCase()) {
+                invalidarElemento(nome, erro);
+                nomeValidado = false;
+            } else {
+                validarElemento(nome);
+                nomeValidado = true;
+            }
+        });
+        sobreNome.addEventListener("input", (event) => {
+            const inicial = sobreNome.value.charAt(0);
+            if(!event.target.value || inicial === inicial.toLowerCase()) {
+                invalidarElemento(sobreNome, erro);
+                sobreNomeValidado = false;
+            } else {
+                validarElemento(sobreNome);
+                sobreNomeValidado = true;
+            }
+        });
+        senha.addEventListener("input", (event) => {
+            let letra = 0;
+            let numero = 0;
+            for (let i = 0; i <= senha.value.length; i++) {
+                let valorAscii = senha.value.charCodeAt(i);
+                if((valorAscii >= 65 && valorAscii <= 90) || (valorAscii >= 97 && valorAscii <= 122)) {
+                    letra += 1;
+                };
+                if(valorAscii >= 48 && valorAscii <= 57) {
+                    numero += 1;
+                }
+            }
+            if(!event.target.value || senha.value.length < 8 || letra === 0 || numero === 0) {
+                invalidarElemento(senha, erro);
+                senhaValidada = false;
+            } else {
+                validarElemento(senha);
+                senhaValidada = true;
+            }
+        });
+
+        form.addEventListener("submit", (event) => {
+            if(senhaValidada === false || nomeValidado === false || sobreNomeValidado === false) {
+                invalidarElemento(botao, erro);
+                event.preventDefault();
+            }
+        });
+
+
+        function invalidarElemento(elemento, mensagem) {
+            elemento.setCustomValidity(mensagem);
+        }
+        //função que detecta erro, parametro vazio ta ok, se digitar parametro é a msg de erro.
+        function validarElemento(elemento) {
+            elemento.setCustomValidity('');
+        }
+    </script>
+
+</html>
