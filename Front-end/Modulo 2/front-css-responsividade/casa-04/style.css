@@ -1,0 +1,135 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FAFAFA;
+}
+
+.titulo {
+    max-width: 540px;
+    margin: 80px auto 0 auto;
+
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+    color: #4D4F62;
+    font-weight: 200;
+    text-align: center;
+}
+
+.titulo p{
+    color: #4D4F62;
+    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.104167px;
+    opacity: 0.5;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin: 64px 115px 80px 115px;
+}
+
+.primeira-coluna{
+    max-width: 350px;
+    min-height: 250px;
+    background-color: white;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+    border-radius: 8px;
+    border-top: 4px solid #44D3D2;
+    align-self: center;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4D4F62;
+    padding-bottom: 6px;
+}
+
+.cards p{
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.0902778px;
+    color: #4D4F62;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-bottom: 40px;
+}
+
+svg {
+    display: block;
+    margin: 0 0 0 auto;
+}
+
+
+.team{
+    width: 100%;
+    max-width: 350px;
+    min-height: 250px;
+    background-color: white;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+    border-radius: 8px;
+    border-top: 4px solid #EA5454;
+}
+
+.karma {
+    width: 100%;
+    max-width: 350px;
+    min-height: 250px;
+    background-color: white;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+    border-radius: 8px;
+    border-top: 4px solid #FCAE4A;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 32px;
+}
+
+.terceira-coluna{
+    max-width: 350px;
+    min-height: 250px;
+    background-color: white;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+    border-radius: 8px;
+    border-top: 4px solid #549EF2;
+    align-self: center;
+}
+
+@media (max-width: 400px) {
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        padding: 32px;
+    }
+    h1{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 30px;
+    }
+    .card {
+        padding: 28px;
+    }
+    
+}
